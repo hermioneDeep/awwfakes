@@ -1,0 +1,239 @@
+:root{
+  --background-dark: #2d3548;
+  --text-light: rgba(255,255,255,0.6);
+  --text-lighter: rgba(255,255,255,0.9);
+  --text-dark: rgba(0,0,0,1);
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  --width-container: 2400px;
+}
+
+*{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  background-color: RGB(0, 0, 0);
+}
+
+.hero-section{
+  max-height: 380px;
+  align-items: flex-end;
+  background-image: rgba(0,0,0,1);
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+}
+.epic_hero-section{
+  max-height: 43em;
+  align-items: flex-end;
+  background-image: rgba(0,0,0,1);
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+}
+
+.card-grid{
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 0 30px;
+  min-width: 100vw;
+  max-height: 38em;
+  min-height: 320px;
+}
+.epic_card-grid{
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 0 30px;
+  min-width: 100vw;
+  max-height: 48em;
+  min-height: 42em;
+}
+
+.card{
+  top: 10px !important;
+  list-style: none;
+  position: relative;
+  max-height: 22em;
+  max-width: 30em;
+  min-height: 22em;
+  min-width: 30em;
+}
+
+.epic_card{
+  top: 4em !important;
+  list-style: none;
+  position: relative;
+  max-height: 38em;
+  max-width: 54em;
+  min-height: 38em;
+  min-width: 54em;
+}
+
+.card:before{
+  content: '';
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+.epic_card:before{
+  content: '';
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+
+.card__background{
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-l);
+  bottom: 0;
+  filter: brightness(0.70) saturate(1.25) contrast(0.90);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  transform: scale(1) translateZ(0);
+  transition: 
+    filter 200ms linear,
+    transform 200ms linear;
+}
+
+.card:hover .card__background{
+  transform: scale(1.05) translateZ(0);
+}
+.epic_card:hover .card__background{
+  transform: scale(1.05) translateZ(0);
+}
+
+header{
+	/* Включаем режим Flexbox. */
+	display: flex; 
+	
+	/* Распределяем элементы внутри шапки */
+	justify-content: space-between;
+
+	/* Выравниваем элементы вертикально по центру. */
+	align-items: center;
+}
+
+
+.card__content{
+  left: 0;
+  bottom: 0;
+  padding: var(--spacing-l);
+  position: absolute;
+  vertical-align: bottom;
+}
+
+.card__category{
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-s);
+  text-transform: uppercase;
+  vertical-align: text-bottom;
+}
+
+.card__heading{
+  color: var(--text-lighter);
+  font-size: 2.6rem;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  line-height: 1.4;
+  vertical-align: bottom;
+  text-align: left;
+}
+
+.epic__heading{
+  color: var(--text-lighter);
+  font-size: 3.6rem;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  line-height: 1.4;
+  vertical-align: bottom;
+  text-align: left;
+}
+
+.card__heading{
+  color: var(--text-lighter);
+  font-size: 2.6rem;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  line-height: 1.4;
+  vertical-align: bottom;
+  text-align: left;
+}
+
+
+.category__heading{
+  color: var(--text-lighter);
+  font-size: 5rem;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  line-height: 1.4;
+  padding-left: 30px;
+  padding-bottom: 5px;
+}
+
+.epic_category__heading{
+  color: var(--text-lighter);
+  font-size: 6.5rem;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  line-height: 1.4;
+  padding-left: 30px;
+  padding-bottom: 5px;
+}
+
+.photo-hero-section{
+  align-items: flex-start;
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  padding: 20px 4vw;
+}
+
+.photo-card-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 100%;
+}
+
+.photo-card{
+  list-style: none;
+  position: relative;
+  max-height: 30em;
+  max-width: 28vw;
+  min-height: 30em;
+  min-width: 28vw;
+}
+
+.photo-card:before{
+  content: '';
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+.photo-card:hover .photo-card__background{
+  transform: scale(1.05) translateZ(0);
+}
